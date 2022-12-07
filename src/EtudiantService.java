@@ -20,24 +20,16 @@ public class EtudiantService {
 		EtudiantRepository StudRep= new EtudiantRepository();
 	    UniversiteRepository UnivRep= new UniversiteRepository();
 	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
-	    Universite univ=UnivRep.GetById(id_universite); 
+	    
 		EtudiantRepository StudRep= new EtudiantRepository();
 	    UniversiteRepository UnivRep= new UniversiteRepository();
 	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
 	    Universite univ=UnivRep.GetById(id_universite);
-		EtudiantRepository StudRep= new EtudiantRepository();
-	    UniversiteRepository UnivRep= new UniversiteRepository();
-	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
-	    Universite univ=UnivRep.GetById(id_universite); 
-		EtudiantRepository StudRep= new EtudiantRepository();
+	    EtudiantRepository StudRep= new EtudiantRepository();
 	    UniversiteRepository UnivRep= new UniversiteRepository();
 	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
 	    Universite univ=UnivRep.GetById(id_universite);
-		EtudiantRepository StudRep= new EtudiantRepository();
-	    UniversiteRepository UnivRep= new UniversiteRepository();
-	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
-	    Universite univ=UnivRep.GetById(id_universite); 
-		EtudiantRepository StudRep= new EtudiantRepository();
+	    EtudiantRepository StudRep= new EtudiantRepository();
 	    UniversiteRepository UnivRep= new UniversiteRepository();
 	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
 	    Universite univ=UnivRep.GetById(id_universite);
