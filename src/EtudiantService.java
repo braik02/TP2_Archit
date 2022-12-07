@@ -17,6 +17,30 @@ public class EtudiantService {
 	    UniversiteRepository UnivRep= new UniversiteRepository();
 	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
 	    Universite univ=UnivRep.GetById(id_universite);
+		EtudiantRepository StudRep= new EtudiantRepository();
+	    UniversiteRepository UnivRep= new UniversiteRepository();
+	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
+	    Universite univ=UnivRep.GetById(id_universite); 
+		EtudiantRepository StudRep= new EtudiantRepository();
+	    UniversiteRepository UnivRep= new UniversiteRepository();
+	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
+	    Universite univ=UnivRep.GetById(id_universite);
+		EtudiantRepository StudRep= new EtudiantRepository();
+	    UniversiteRepository UnivRep= new UniversiteRepository();
+	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
+	    Universite univ=UnivRep.GetById(id_universite); 
+		EtudiantRepository StudRep= new EtudiantRepository();
+	    UniversiteRepository UnivRep= new UniversiteRepository();
+	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
+	    Universite univ=UnivRep.GetById(id_universite);
+		EtudiantRepository StudRep= new EtudiantRepository();
+	    UniversiteRepository UnivRep= new UniversiteRepository();
+	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
+	    Universite univ=UnivRep.GetById(id_universite); 
+		EtudiantRepository StudRep= new EtudiantRepository();
+	    UniversiteRepository UnivRep= new UniversiteRepository();
+	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
+	    Universite univ=UnivRep.GetById(id_universite);
 	    
 	    System.out.println("Log: d�but de l'op�ration d'ajout de l'�tudiant avec matricule "+matricule);
 	    
