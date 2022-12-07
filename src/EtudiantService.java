@@ -8,6 +8,11 @@ public class EtudiantService {
 	
 	boolean inscription (int matricule, String nom, String pr�nom, String email,String pwd, int id_universite) throws SQLException	
 	{
+		
+		EtudiantRepository StudRep= new EtudiantRepository();
+	    UniversiteRepository UnivRep= new UniversiteRepository();
+	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
+	    Universite univ=UnivRep.GetById(id_universite); 
 		EtudiantRepository StudRep= new EtudiantRepository();
 	    UniversiteRepository UnivRep= new UniversiteRepository();
 	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);

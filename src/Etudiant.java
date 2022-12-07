@@ -19,6 +19,11 @@ public class Etudiant {
 			this.email = email;
 			this.pwd = pwd;
 			this.id_universite = id_universite;
+			this.matricule = matricule;
+			this.nom = nom;
+			this.prenom = prenom;
+			this.email = email;
+			this.pwd = pwd;
 		}
 
 

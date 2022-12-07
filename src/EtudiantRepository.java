@@ -10,6 +10,13 @@ public class EtudiantRepository {
 	void add(Etudiant E) throws SQLException
 	{
 
+		
+		DBConnection BD= new DBConnection();
+		Connection connect=BD.getConn();
+		
+		Statement stmt = connect.createStatement();
+		String sql = "INSERT into etudiant values (" + E.getMatricule() + ",'" + E.getNom() + "','" + E.getPrenom() + "','" + E.getEmail() + "'," +E.getNbLivreMensuel_Autorise() + "," +E.getNbLivreEmprunte() + "," +E.getId_universite()+")";
+		int rs = stmt.executeUpdate(sql); 
 		DBConnection BD= new DBConnection();
 		Connection connect=BD.getConn();
 		
