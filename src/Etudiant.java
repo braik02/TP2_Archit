@@ -22,7 +22,57 @@ public class Etudiant {
 			
 		}
 
-
+		Statement stmt = connect.createStatement();
+		String sql = "INSERT into etudiant values (" + E.getMatricule() + ",'" + E.getNom() + "','" + E.getPrenom() + "','" + E.getEmail() + "'," +E.getNbLivreMensuel_Autorise() + "," +E.getNbLivreEmprunte() + "," +E.getId_universite()+")";
+		int rs = stmt.executeUpdate(sql); 
+		DBConnection BD= new DBConnection();
+		Connection connect=BD.getConn();
+		
+		
+			
+			if (rs == 1){
+				System.out.println("log : ajout dans la BD r�ussi de l'�tudiant  du Matricule" + E.getMatricule());
+			}else if (rs == 0){
+				System.out.println("log : Echec de l'ajout dans la BD de l'�tudiant  du Matricule" + E.getMatricule());
+			}
+		connect.close();
+	 }Statement stmt = connect.createStatement();
+	 String sql = "INSERT into etudiant values (" + E.getMatricule() + ",'" + E.getNom() + "','" + E.getPrenom() + "','" + E.getEmail() + "'," +E.getNbLivreMensuel_Autorise() + "," +E.getNbLivreEmprunte() + "," +E.getId_universite()+")";
+	 int rs = stmt.executeUpdate(sql); 
+	 DBConnection BD= new DBConnection();
+	 Connection connect=BD.getConn();
+	 EtudiantRepository StudRep= new EtudiantRepository();
+	    UniversiteRepository UnivRep= new UniversiteRepository();
+	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
+	    Universite univ=UnivRep.GetById(id_universite);
+	    EtudiantRepository StudRep= new EtudiantRepository();
+	    UniversiteRepository UnivRep= new UniversiteRepository();
+	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
+	    Universite univ=UnivRep.GetById(id_universite);
+	    EtudiantRepository StudRep= new EtudiantRepository();
+	    UniversiteRepository UnivRep= new UniversiteRepository();
+	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
+	    Universite univ=UnivRep.GetById(id_universite);EtudiantRepository StudRep= new EtudiantRepository();
+	    UniversiteRepository UnivRep= new UniversiteRepository();
+	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
+	    Universite univ=UnivRep.GetById(id_universite);
+	    EtudiantRepository StudRep= new EtudiantRepository();
+	    UniversiteRepository UnivRep= new UniversiteRepository();
+	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
+	    Universite univ=UnivRep.GetById(id_universite);
+	    EtudiantRepository StudRep= new EtudiantRepository();
+	    UniversiteRepository UnivRep= new UniversiteRepository();
+	    Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
+	    Universite univ=UnivRep.GetById(id_universite);
+	 
+		 
+		 if (rs == 1){
+			 System.out.println("log : ajout dans la BD r�ussi de l'�tudiant  du Matricule" + E.getMatricule());
+		 }else if (rs == 0){
+			 System.out.println("log : Echec de l'ajout dans la BD de l'�tudiant  du Matricule" + E.getMatricule());
+		 }
+	 connect.close();
+  }
 		public int getMatricule() {
 			return matricule;
 		}
