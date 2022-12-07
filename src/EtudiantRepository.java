@@ -34,22 +34,7 @@ public class EtudiantRepository {
 		DBConnection BD= new DBConnection();
 		Connection connect=BD.getConn();
 		
-		Statement stmt = connect.createStatement();
-		String sql = "INSERT into etudiant values (" + E.getMatricule() + ",'" + E.getNom() + "','" + E.getPrenom() + "','" + E.getEmail() + "'," +E.getNbLivreMensuel_Autorise() + "," +E.getNbLivreEmprunte() + "," +E.getId_universite()+")";
-		int rs = stmt.executeUpdate(sql);
 		
-		if (rs == 1){ DBConnection BD= new DBConnection();
-			Connection connect=BD.getConn();
-			
-			Statement stmt = connect.createStatement();
-			String sql = "INSERT into etudiant values (" + E.getMatricule() + ",'" + E.getNom() + "','" + E.getPrenom() + "','" + E.getEmail() + "'," +E.getNbLivreMensuel_Autorise() + "," +E.getNbLivreEmprunte() + "," +E.getId_universite()+")";
-			int rs = stmt.executeUpdate(sql); 
-			DBConnection BD= new DBConnection();
-			Connection connect=BD.getConn();
-			
-			Statement stmt = connect.createStatement();
-			String sql = "INSERT into etudiant values (" + E.getMatricule() + ",'" + E.getNom() + "','" + E.getPrenom() + "','" + E.getEmail() + "'," +E.getNbLivreMensuel_Autorise() + "," +E.getNbLivreEmprunte() + "," +E.getId_universite()+")";
-			int rs = stmt.executeUpdate(sql);
 			
 			if (rs == 1){
 				System.out.println("log : ajout dans la BD r�ussi de l'�tudiant  du Matricule" + E.getMatricule());
