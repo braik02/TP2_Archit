@@ -28,21 +28,7 @@ public class EtudiantRepository {
 			DBConnection BD= new DBConnection();
 		Connection connect=BD.getConn();
 		
-		Statement stmt = connect.createStatement();
-		String sql = "INSERT into etudiant values (" + E.getMatricule() + ",'" + E.getNom() + "','" + E.getPrenom() + "','" + E.getEmail() + "'," +E.getNbLivreMensuel_Autorise() + "," +E.getNbLivreEmprunte() + "," +E.getId_universite()+")";
-		int rs = stmt.executeUpdate(sql); 
-		DBConnection BD= new DBConnection();
-		Connection connect=BD.getConn();
 		
-		
-			
-			if (rs == 1){
-				System.out.println("log : ajout dans la BD r�ussi de l'�tudiant  du Matricule" + E.getMatricule());
-			}else if (rs == 0){
-				System.out.println("log : Echec de l'ajout dans la BD de l'�tudiant  du Matricule" + E.getMatricule());
-			}
-		connect.close();
-	 }
 
 	 DBConnection BD= new DBConnection();
 	 Connection connect=BD.getConn();
@@ -60,28 +46,7 @@ public class EtudiantRepository {
   }
 
 
-	boolean Exists(String email) throws SQLException	
-	{
-		DBConnection BD= new DBConnection();
-		Connection connect=BD.getConn();
-		
-		Statement stmt = connect.createStatement();
-		String sql = "select * from etudiant where email='"+ email+"'";
-		boolean rs = stmt.execute(sql);
-		
-		if (rs){
-			System.out.println("logBD--- :email existe dans la BD  " + email);
-			connect.close();
-			return true;
-			}
-		System.out.println("logBD--- : email n'existe pas " + email);	
-		connect.close();
-		return false;
-	}
-	
-	boolean Exists(int mat) throws SQLException	
-	{
-		DBConnection BD= new DBConnection();
+
 		Connection connect=BD.getConn();
 		
 		Statement stmt = connect.createStatement();

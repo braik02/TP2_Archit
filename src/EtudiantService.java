@@ -3,6 +3,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+
+import javax.sound.midi.VoiceStatus;
 public class EtudiantService {
 	
 	
@@ -44,7 +46,8 @@ public class EtudiantService {
 	}
 	    if(email == null || email.length() == 0)
 	    {
-	    	return false;
+	
+			return false;
 	    }
 	    
 	    if (StudRep.Exists(matricule))
@@ -58,6 +61,21 @@ public class EtudiantService {
 			Universite univ=UnivRep.GetById(id_universite);
 			
 			System.out.println("Log: d�but de l'op�ration d'ajout de l'�tudiant avec matricule "+matricule);
+			return false;
+	    }
+	    
+	    if (StudRep.Exists(matricule))
+	    {
+	        return false;
+	    }boolean inscription (int matricule, String nom, String pr�nom, String email,String pwd, int id_universite) throws SQLException	
+		{
+			EtudiantRepository StudRep= new EtudiantRepository();
+			UniversiteRepository UnivRep= new UniversiteRepository();
+			Etudiant stud = new Etudiant(matricule, nom, pr�nom, email,pwd,id_universite);
+			Universite univ=UnivRep.GetById(id_universite);
+			
+			System.out.println("Log: d�but de l'op�ration d'ajout de l'�tudiant avec matricule "+matricule);
+			VoiceStatus
 			
 			if(email == null || email.length() == 0)
 			{
